@@ -1,12 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Busdjetkankulator</title>
-    <link rel="stylesheet" href="">
+    <title>Budsjettkalkulator</title>
+    <link rel="stylesheet" href="/CSS/style.css">
 </head>
 <body>
-    
+ 
+    <div class="container">
+ 
+        <h1>Budsjettkalkulator</h1>
+        <p>Legg inn inntekter og utgifter for måneden.</p>
+ 
+        <div class="forms">
+ 
+            <div class="box">
+                <h2>Inntekt</h2>
+ 
+                <label for="incomeName">Navn</label>
+                <input type="text" id="incomeName" placeholder="F.eks. Lønn">
+ 
+                <label for="incomeCategory">Kategori</label>
+                <select id="incomeCategory">
+                    <option value="Lønn">Lønn</option>
+                    <option value="Stipend">Stipend</option>
+                    <option value="Annet">Annet</option>
+                </select>
+ 
+                <label for="incomeAmount">Beløp</label>
+                <input type="number" id="incomeAmount" placeholder="Beløp">
+ 
+                <button onclick="addIncome()">Legg til inntekt</button>
+            </div>
+ 
+            <div class="box">
+                <h2>Utgift</h2>
+ 
+                <label for="expenseName">Navn</label>
+                <input type="text" id="expenseName" placeholder="F.eks. Mat">
+ 
+                <label for="expenseCategory">Kategori</label>
+                <select id="expenseCategory">
+                    <option value="Mat">Mat</option>
+                    <option value="Husleie">Husleie</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Lån">Lån</option>
+                    <option value="Strøm">Strøm</option>
+                    <option value="Annet">Annet</option>
+                </select>
+ 
+                <label for="expenseAmount">Beløp</label>
+                <input type="number" id="expenseAmount" placeholder="Beløp">
+ 
+                <button onclick="addExpense()">Legg til utgift</button>
+            </div>
+ 
+        </div>
+ 
+        <h2>Mine poster</h2>
+ 
+        <div id="list">
+            <p>Ingen poster lagt til.</p>
+        </div>
+ 
+        <div class="result">
+            <p>Totale inntekter: <span id="incomeTotal">0 kr</span></p>
+            <p>Totale utgifter: <span id="expenseTotal">0 kr</span></p>
+            <h2>Saldo: <span id="balance">0 kr</span></h2>
+        </div>
+ 
+        <div class="buttons">
+            <button onclick="printBudget()">Skriv ut</button>
+            <button onclick="clearBudget()">Tøm budsjett</button>
+        </div>
+ 
+    </div>
+ 
+    <script src="/javascript/script.js"></script>
+ 
 </body>
-</html>
+</html> 
