@@ -33,3 +33,23 @@ label {
     margin-top: 10px;
     margin-bottom: 5px;
 } 
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+ 
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #2d3546;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+} 
