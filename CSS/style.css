@@ -15,3 +15,21 @@ body {
 h1 {
     text-align: center;
 } 
+
+.forms {
+    display: flex;
+    gap: 20px;
+}
+ 
+.box {
+    flex: 1;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+} 
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+} 
