@@ -145,3 +145,44 @@ function saveBudget() {
     localStorage.setItem("incomes", JSON.stringify(incomes));
     localStorage.setItem("expenses", JSON.stringify(expenses));
 } 
+
+function loadBudget() {
+ 
+    let savedIncomes = localStorage.getItem("incomes");
+    let savedExpenses = localStorage.getItem("expenses");
+ 
+    if (savedIncomes) {
+        incomes = JSON.parse(savedIncomes);
+    }
+ 
+    if (savedExpenses) {
+        expenses = JSON.parse(savedExpenses);
+    }
+ 
+    showBudget();
+}
+ 
+function clearBudget() {
+ 
+    let answer = confirm("Vil du slette hele budsjettet?");
+ 
+    if (answer) {
+ 
+        incomes = [];
+        expenses = [];
+ 
+        localStorage.removeItem("incomes");
+        localStorage.removeItem("expenses");
+ 
+        showBudget();
+    }
+}
+ 
+function printBudget() {
+    window.print();
+}
+ 
+function money(amount) {
+ 
+    return new Intl.NumberFormat("nb-NO").format(amount) + " kr";
+} 
