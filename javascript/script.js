@@ -123,3 +123,25 @@ function showBudget() {
         document.getElementById("balance").classList.remove("minus");
     }
 } 
+
+function deleteIncome(index) {
+ 
+    incomes.splice(index, 1);
+ 
+    saveBudget();
+    showBudget();
+}
+ 
+function deleteExpense(index) {
+ 
+    expenses.splice(index, 1);
+ 
+    saveBudget();
+    showBudget();
+}
+ 
+function saveBudget() {
+ 
+    localStorage.setItem("incomes", JSON.stringify(incomes));
+    localStorage.setItem("expenses", JSON.stringify(expenses));
+} 
