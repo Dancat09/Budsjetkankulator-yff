@@ -53,3 +53,89 @@ button {
     border-radius: 5px;
     cursor: pointer;
 } 
+button:hover {
+    background-color: #555;
+}
+ 
+.post {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+}
+ 
+.income {
+    background-color: #dff0df;
+}
+ 
+.expense {
+    background-color: #f5dddd;
+}
+ 
+.post button {
+    width: auto;
+    margin: 0;
+    padding: 6px 10px;
+    background-color: #c0392b;
+}
+ 
+.result {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #eeeeee;
+    border-radius: 8px;
+}
+ 
+#balance {
+    color: green;
+}
+ 
+.minus {
+    color: red !important;
+}
+ 
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+ 
+.buttons button {
+    flex: 1;
+}
+ 
+@media (max-width: 600px) {
+ 
+    .forms {
+        flex-direction: column;
+    }
+ 
+    .post {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+ 
+    .buttons {
+        flex-direction: column;
+    }
+}
+ 
+@media print {
+ 
+    body {
+        background-color: white;
+    }
+ 
+    .container {
+        margin: 0;
+        max-width: none;
+    }
+ 
+    .forms,
+    .buttons,
+    .post button {
+        display: none;
+    }
+} 
